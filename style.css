@@ -34,9 +34,12 @@ body {
     align-items: center;
 }
 
-.header a.active {
-    background-color: dodgerblue;
+.header a:hover {
+    background-color: #15a4fa;
     color: white;
+}
+
+.header a.active {
     width: 170px;
 
 }
@@ -292,14 +295,6 @@ img {
     font-size: small;
 }
 
-.active-browse {
-    background-color: #15a4fa;
-}
-
-.active-color {
-    color: white;
-}
-
 .li-red {
     color: red;
     font-size: x-large;
@@ -403,4 +398,7 @@ article p {
     background-color: #1f2637;
 }
 
-
+.nav-side-bar a:hover {
+    background-color: #15a4fa;
+    color: white;
+}
