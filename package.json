@@ -1,0 +1,25 @@
+{
+  "name": "html-css-practise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "sass style.scss style.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinkmadkitten/html-css-practise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pinkmadkitten/html-css-practise/issues"
+  },
+  "homepage": "https://github.com/pinkmadkitten/html-css-practise#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.4",
+    "sass": "^1.14.3"
+  }
+}
