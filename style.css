@@ -20,7 +20,7 @@ body {
     z-index: 1;
 }
 
-.top-bar__link {
+.top-bar__btn {
     float: left;
     color: #78829d;
     text-align: center;
@@ -32,22 +32,27 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
+    background-color:#2f364a;
+    border: none;
+    cursor: pointer;
 }
 
-.top-bar__link:hover {
+.top-bar__btn:hover {
     background-color: #15a4fa;
     color: white;
 }
 
-.top-bar__link:last-of-type {
-    width: 170px;
-}
 
-.top-bar__links {
+.top-bar__buttons {
     display: flex;
     height: 100%;
     align-items: center;
 }
+
+.drop-btn {
+    width: 175px;
+}
+
 
 .dot-black {
     background-color: #19202e;
@@ -159,6 +164,16 @@ body {
     border: black;
     cursor: pointer;
 }
+.side-bar__button:hover {
+    background-color: #a85947;
+}
+
+.side-bar__button:active {
+    background-color: #a85947;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 
 .side-bar__action p {
     font-size: small;
@@ -370,14 +385,11 @@ ul {
     height: 40px;
 }
 
-.bottom-bar__links {
+.bottom-bar__buttons {
     display: flex;
     justify-content: flex-end;
 }
 
-.bottom-bar__links a:hover {
-    background-color: #15a4fa;
-}
 
 .fa-question-circle,
 .fa-cog {
@@ -386,4 +398,83 @@ ul {
     font-size: large !important;
     height: 50px;
     margin-left: 5px;
+}
+
+
+fieldset, label { margin: 0; padding: 0; }
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+    margin-right: 5px;
+    font-size: medium;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: orange;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+    color: orange;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-content {
+    display: none;
+    position: fixed;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 52px;
+}
+
+.drop-content a {
+    color: #8c97b2;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial;
+    font-size: small;
+}
+
+.drop-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+
+.dropdown:hover .drop-btn:hover {
+    background-color: #15a4fa;
+}
+
+.drop-icon {
+    margin-right: 10px;
 }

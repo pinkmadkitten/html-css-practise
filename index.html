@@ -18,15 +18,22 @@
             <i class="fa fa-book logo-icon" aria-hidden="true"></i>
             <p class="logo">MyBookApp</p>
         </div>
-        <nav class="top-bar__links">
-            <a class="top-bar__link" href="#">Help Center</a>
+        <nav class="top-bar__buttons">
+            <button class="top-bar__btn">Help Center</button>
             <span class="dot dot-black"></span>
-            <a class="top-bar__link" href="#">Our Support</a>
-            <a class="top-bar__link" href="#">
-                <img class="ava-img" src="images/avatar-01.jpg">
+            <button class="top-bar__btn">Our Support</button>
+            <div class="dropdown">
+            <button class="top-bar__btn drop-btn">
+                <img class="ava-img" alt="ava" src="images/avatar-01.jpg">
                 <span class="profile">John Doe</span>
                 <i class="fa fa-check-circle" aria-hidden="true"></i>
-            </a>
+            </button>
+                <div class="drop-content">
+                    <a href="#"><i class="fa fa-book drop-icon" aria-hidden="true"></i><span>My Books</span></a>
+                    <a href="#"><i class="fa fa-shopping-basket drop-icon" aria-hidden="true"></i><span>My Basket</span></a>
+                    <a href="#"><i class="fa fa-sign-out drop-icon" aria-hidden="true"></i><span>Log Out</span></a>
+                </div>
+            </div>
         </nav>
     </header>
     <div class="side-bar">
@@ -81,128 +88,288 @@
             <i class="fa fa-search search-icon"></i>
         </form>
     </div>
-    <main class="content">
+    <div class="content">
         <article class="book-description">
-            <img src="images/book-cover.jpg">
+            <img alt="Jewels of Nizam" src="images/book-cover.jpg">
             <div class="book-description__header">
                 <h4>Jewels of Nizam</h4>
                 <p> by Geeta Devi</p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
+            <fieldset class="rating">
+                <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
         <article class="book-description">
-            <img src="images/2.jpg">
+            <img alt="Cakes & Bakes" src="images/2.jpg">
             <div class="book-description__header">
                 <h4>Cakes & Bakes</h4>
                 <p> by Sanjeev Kapoor</p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
+            <fieldset class="rating">
+                <input type="radio" id="star50" name="rating0" value="5" />
+                <label class = "full" for="star50" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half0" name="rating0" value="4 and a half" />
+                <label class="half" for="star4half0" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star40" name="rating0" value="4" />
+                <label class = "full" for="star40" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half0" name="rating0" value="3 and a half" />
+                <label class="half" for="star3half0" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star30" name="rating0" value="3" />
+                <label class = "full" for="star30" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half0" name="rating0" value="2 and a half" />
+                <label class="half" for="star2half0" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star20" name="rating0" value="2" />
+                <label class = "full" for="star20" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half0" name="rating0" value="1 and a half" />
+                <label class="half" for="star1half0" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star10" name="rating0" value="1" />
+                <label class = "full" for="star10" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf0" name="rating0" value="half" />
+                <label class="half" for="starhalf0" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
         <article class="book-description">
-            <img src="images/3.jpg">
+            <img alt="Jamie's Kitchen" src="images/3.jpg">
             <div class="book-description__header">
                 <h4>Jamie's Kitchen</h4>
                 <p> by Jamie Oliver</p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <i class="fa fa-star-half-o checked" aria-hidden="true"></i>
+            <fieldset class="rating">
+                <input type="radio" id="star51" name="rating1" value="5" />
+                <label class = "full" for="star51" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half1" name="rating1" value="4 and a half" />
+                <label class="half" for="star4half1" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star41" name="rating1" value="4" />
+                <label class = "full" for="star41" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half1" name="rating1" value="3 and a half" />
+                <label class="half" for="star3half1" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star31" name="rating1" value="3" />
+                <label class = "full" for="star31" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half1" name="rating1" value="2 and a half" />
+                <label class="half" for="star2half1" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star21" name="rating1" value="2" />
+                <label class = "full" for="star21" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half1" name="rating1" value="1 and a half" />
+                <label class="half" for="star1half1" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star11" name="rating1" value="1" />
+                <label class = "full" for="star11" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf1" name="rating1" value="half" />
+                <label class="half" for="starhalf1" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
         <article class="book-description">
-            <img src="images/4.jpg">
+            <img alt="Inexpensive Family Meals" src="images/4.jpg">
             <div class="book-description__header">
                 <h4>Inexpensive Family Meals</h4>
                 <p> by Simon Holst</p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <i class="fa fa-star-o checked" aria-hidden="true"></i>
+            <fieldset class="rating">
+                <input type="radio" id="star52" name="rating2" value="5" />
+                <label class = "full" for="star52" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half2" name="rating2" value="4 and a half" />
+                <label class="half" for="star4half2" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star42" name="rating2" value="4" />
+                <label class = "full" for="star42" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half2" name="rating2" value="3 and a half" />
+                <label class="half" for="star3half2" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star32" name="rating2" value="3" />
+                <label class = "full" for="star32" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half2" name="rating2" value="2 and a half" />
+                <label class="half" for="star2half2" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star22" name="rating2" value="2" />
+                <label class = "full" for="star22" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half2" name="rating2" value="1 and a half" />
+                <label class="half" for="star1half2" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star12" name="rating2" value="1" />
+                <label class = "full" for="star12" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf2" name="rating2" value="half" />
+                <label class="half" for="starhalf2" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
         <article class="book-description">
-            <img src="images/5.jpg">
+            <img alt="Paleo Slow Cooking" src="images/5.jpg">
             <div class="book-description__header">
                 <h4> Paleo Slow Cooking</h4>
                 <p> by Chrissy Gover</p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <i class="fa fa-star-half-o checked" aria-hidden="true"></i>
+            <fieldset class="rating">
+                <input type="radio" id="star53" name="rating3" value="5" />
+                <label class = "full" for="star53" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half3" name="rating3" value="4 and a half" />
+                <label class="half" for="star4half3" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star43" name="rating3" value="4" />
+                <label class = "full" for="star43" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half3" name="rating3" value="3 and a half" />
+                <label class="half" for="star3half3" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star33" name="rating3" value="3" />
+                <label class = "full" for="star33" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half3" name="rating3" value="2 and a half" />
+                <label class="half" for="star2half3" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star23" name="rating3" value="2" />
+                <label class = "full" for="star23" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half3" name="rating3" value="1 and a half" />
+                <label class="half" for="star1half3" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star13" name="rating3" value="1" />
+                <label class = "full" for="star13" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf3" name="rating3" value="half" />
+                <label class="half" for="starhalf3" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
         <article class="book-description">
-            <img src="images/6.jpg">
+            <img alt="Cook Like an Italian" src="images/6.jpg">
             <div class="book-description__header">
                 <h4>Cook Like an Italian</h4>
                 <p> by Tobie Puttock</p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <i class="fa fa-star-o checked" aria-hidden="true"></i>
+            <fieldset class="rating">
+                <input type="radio" id="star54" name="rating4" value="5" />
+                <label class = "full" for="star54" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half4" name="rating4" value="4 and a half" />
+                <label class="half" for="star4half4" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star44" name="rating4" value="4" />
+                <label class = "full" for="star44" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half4" name="rating4" value="3 and a half" />
+                <label class="half" for="star3half4" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star34" name="rating4" value="3" />
+                <label class = "full" for="star34" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half4" name="rating4" value="2 and a half" />
+                <label class="half" for="star2half4" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star24" name="rating4" value="2" />
+                <label class = "full" for="star24" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half4" name="rating4" value="1 and a half" />
+                <label class="half" for="star1half4" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star14" name="rating4" value="1" />
+                <label class = "full" for="star14" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf4" name="rating4" value="half" />
+                <label class="half" for="starhalf4" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
         <article class="book-description">
-            <img src="images/7.jpg">
+            <img alt="Suneeta Vaswani" src="images/7.jpg">
             <div class="book-description__header">
                 <h4>Suneeta Vaswani</h4>
                 <p> by Geeta Devi</p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
+            <fieldset class="rating">
+                <input type="radio" id="star55" name="rating5" value="5" />
+                <label class = "full" for="star55" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half5" name="rating5" value="4 and a half" />
+                <label class="half" for="star4half5" title="5Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star45" name="rating" value="4" />
+                <label class = "full" for="star45" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half5" name="rating5" value="3 and a half" />
+                <label class="half" for="star3half5" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star35" name="rating5" value="3" />
+                <label class = "full" for="star35" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half5" name="rating5" value="2 and a half" />
+                <label class="half" for="star2half5" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star25" name="rating5" value="2" />
+                <label class = "full" for="star25" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half5" name="rating5" value="1 and a half" />
+                <label class="half" for="star1half5" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star15" name="rating5" value="1" />
+                <label class = "full" for="star15" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf5" name="rating5" value="half" />
+                <label class="half" for="starhalf5" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
         <article class="book-description">
-            <img src="images/8gr.png">
+            <img alt="Jamie Does" src="images/8gr.png">
             <div class="book-description__header">
                 <h4>Jamie Does</h4>
                 <p> by Jamie Oliver</p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <i class="fa fa-star-o checked" aria-hidden="true"></i>
+            <fieldset class="rating">
+                <input type="radio" id="star56" name="rating6" value="5" />
+                <label class = "full" for="star56" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half6" name="rating6" value="4 and a half" />
+                <label class="half" for="star4half6" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star46" name="rating6" value="4" />
+                <label class = "full" for="star46" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half6" name="rating6" value="3 and a half" />
+                <label class="half" for="star3half6" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star36" name="rating6" value="3" />
+                <label class = "full" for="star36" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half6" name="rating6" value="2 and a half" />
+                <label class="half" for="star2half6" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star26" name="rating6" value="2" />
+                <label class = "full" for="star26" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half6" name="rating6" value="1 and a half" />
+                <label class="half" for="star1half6" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star16" name="rating6" value="1" />
+                <label class = "full" for="star16" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf6" name="rating6" value="half" />
+                <label class="half" for="starhalf6" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
         <article class="book-description">
-            <img src="images/8.jpg">
+            <img alt="Jamie's Italy" src="images/8.jpg">
             <div class="book-description__header">
                 <h4>Jamie's Italy</h4>
                 <p> by Jamie Oliver</p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
+            <fieldset class="rating">
+                <input type="radio" id="star57" name="rating7" value="5" />
+                <label class = "full" for="star57" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half7" name="rating7" value="4 and a half" />
+                <label class="half" for="star4half7" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star47" name="rating7" value="4" />
+                <label class = "full" for="star47" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half7" name="rating7" value="3 and a half" />
+                <label class="half" for="star3half7" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star37" name="rating7" value="3" />
+                <label class = "full" for="star37" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half7" name="rating7" value="2 and a half" />
+                <label class="half" for="star2half7" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star27" name="rating7" value="2" />
+                <label class = "full" for="star27" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half7" name="rating7" value="1 and a half" />
+                <label class="half" for="star1half7" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star17" name="rating7" value="1" />
+                <label class = "full" for="star17" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf7" name="rating7" value="half" />
+                <label class="half" for="starhalf7" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
         <article class="book-description">
-            <img src="images/10.jpg">
+            <img alt="Vegetables Cookbook" src="images/10.jpg">
             <div class="book-description__header">
                 <h4>Vegetables Cookbook </h4>
                 <p> by Matthew Biggs </p>
             </div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <i class="fa fa-star-half-o checked" aria-hidden="true"></i>
-            <i class="fa fa-star-o checked" aria-hidden="true"></i>
+            <fieldset class="rating">
+                <input type="radio" id="star58" name="rating8" value="5" />
+                <label class = "full" for="star58" title="Awesome - 5 stars"></label>
+                <input type="radio" id="star4half8" name="rating8" value="4 and a half" />
+                <label class="half" for="star4half8" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star48" name="rating8" value="4" />
+                <label class = "full" for="star48" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half8" name="rating8" value="3 and a half" />
+                <label class="half" for="star3half8" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star38" name="rating8" value="3" />
+                <label class = "full" for="star38" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half8" name="rating8" value="2 and a half" />
+                <label class="half" for="star2half8" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star28" name="rating8" value="2" />
+                <label class = "full" for="star28" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half8" name="rating8" value="1 and a half" />
+                <label class="half" for="star1half8" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star18" name="rating8" value="1" />
+                <label class = "full" for="star18" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf8" name="rating8" value="half" />
+                <label class="half" for="starhalf8" title="Sucks big time - 0.5 stars"></label>
+            </fieldset>
         </article>
-    </main>
+    </div>
 </main>
 <footer class="bottom-bar">
     <div class="bottom-bar__links">
